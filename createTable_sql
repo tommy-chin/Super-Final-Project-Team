@@ -1,0 +1,38 @@
+CREATE TABLE ICU_data (
+     elective_surgery INT NOT NULL,
+     hospital_death INT NOT NULL,
+	 d1_heartrate_min INT NOT NULL,
+     d1_heartrate_max INT NOT NULL,
+	 d1_sysbp_min INT NOT NULL,
+	 d1_sysbp_max INT NOT NULL, 
+	 d1_diasbp_max INT NOT NULL, 
+	 d1_diasbp_min INT NOT NULL, 
+	 arf_apache INT NOT NULL, 
+	 immunosuppression INT NOT NULL,
+	 gcs_verbal_apache INT NOT NULL,
+	 gcs_motor_apache INT NOT NULL,
+	 gcs_eyes_apache INT NOT NULL,
+	 bmi VARCHAR NOT NULL,
+	 weight VARCHAR NOT NULL,
+	 age INT NOT NULL,
+	 d1_glucose_min INT NOT NULL,
+	 d1_glucose_max INT NOT NULL,
+	 gender VARCHAR NOT NULL,
+	 patient_id INT NOT NULL,
+	 PRIMARY KEY (patient_id)
+);
+
+-- making demographic table 
+SELECT patient_id, gender, age, weight, bmi, elective_surgery, hospital_death
+INTO patient_demographics 
+FROM icu_data
+
+-- making bp and heartrate table
+SELECT patient_id, gender, d1_heartrate_min, d1_heartrate_max, d1_sysbp_min, d1_sysbp_max, d1_diasbp_max, d1_diasbp_min
+INTO  blood_pressure_heart_rate
+FROM icu_data
+
+-- making gcs_tests table 
+SELECT patient_id, gender, gcs_verbal_apache, gcs_motor_apache, gcs_eyes_apache
+INTO  gcs_tests
+FROM icu_data
