@@ -21,7 +21,8 @@ We were interested in seeing how different factors influenced whether or not a p
 ### Explanation of model choice, including limitations and benefits
 Since our dataset had labeled data, it was natural for us to perform a supervised machine learning model. The model that we chose was random forest classifer so that we could better understand the importance levels of each individual column. The random forest classifer has many benefits and one of them being that it is an ensemble learning technique which helps reduce overfitting and variance. This helps us our machine learning model have a better accuracy score. Since our cleaned dataset has 77,974 rows, it is quite possible that there are outliers in the dataset that could skew our results. However, random forest classifer is shown to be robust to outliers. A limitation of random forest classifer is that since our cleaned dataset is large, there are many decision trees to be made which leads to the model having a long training time which also requires more computational power.
 
-
+## Link to Google Slides
+https://docs.google.com/presentation/d/1hRXXjuN23n1NzC3Kvboo2ra6cVmhRnCKV_u7cMkz-D0/edit?usp=sharing
 
 
 
