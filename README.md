@@ -26,7 +26,7 @@ Since our dataset had labeled data, it was natural for us to perform a supervise
 ### Explanation of changes in model choice
 Random forest classifier was chosen for our supervised machine learning model from the start. However, the dataset that we used for this model had gone through various changes. Originally, we had run random forest classifier on a dataset with all rows that had NaN values dropped. Although this gave us an understanding on what columns may have been important, the low number of rows left in the dataset and the low accuracy of the testing score prompted us to revisit our data preprocessing. Once we established our current cleaned dataset, we decided to run random forest classifer on 10% of the dataset to have a better understanding of how the training and testing scores would look on the whole dataset. The reasoning behind this was to save computing time on the off chance that the training and testing scores were not acceptable. After running random forest classifer on the whole cleaned dataset, it was shown to have similar training and testing scores to the model ran on 10% of the dataset.
 ### Description of current accuracy score
-After fitting our Random Forest Classifier, our training score had an accuracy of 0.919 while our testing score had an accuracy of 0.921. 
+After fitting our Random Forest Classifier, our cleaned dataset had a training score accuracy of 0.919 and a testing score accuracy of 0.921. 
 ## Link to Google Slides
 https://docs.google.com/presentation/d/1hRXXjuN23n1NzC3Kvboo2ra6cVmhRnCKV_u7cMkz-D0/edit?usp=sharing
 
