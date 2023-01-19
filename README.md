@@ -3,7 +3,7 @@
 When healthcare workers measure and analyze the vitals included in our dataset, they are provided an insight into the medical history of the patient. This is particularly important in the ICU wing, since patients are often not in a consious state. Of course medical history can be requested from another hospital, however it could take hours or days to recieve. Frankly, patients in the ICU do not have the time to wait. 
 
 
-In this study, we will identify the factors that have the most impact predicting survivability using a supervised machine learning model. We are building this model on an extremely diverse dataset, with information from 366 hospitals in the United States, Australia, and New Zealand. We will then attempt to visualize their influence in an effort to educate those new to the healthcare profession. We hope that this motivates hospital staff to diligently study vitals and reassure them of their role's importance.
+In this study, we will identify the factors that have the most impact predicting survivability using a supervised machine learning model. We are building this model on an extremely diverse dataset, with information from 366 hospitals in the United States, Australia, and New Zealand. We will then attempt to visualize these factors and their influence in an effort to educate those new to the healthcare profession. We hope that this motivates hospital staff to diligently study vitals and reassure them of their role's importance.
 
 We will be communicating via slack to evenly divide all imporant tasks and to notify the team of any new discoveries. 
 
