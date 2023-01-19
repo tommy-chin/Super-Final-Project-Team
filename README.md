@@ -1,13 +1,10 @@
 # Exploring Death in the ICU
  
-Our main goal is to anaylyze the importance of certain vitals from patients staying in the ICU in the effort to predict survivability. 
+When healthcare workers measure and analyze the vitals included in our dataset, they are provided an insight into the medical history of the patient. This is particularly important in the ICU wing, since patients are often not in a consious state. Of course medical history can be requested from another hospital, however it could take hours or days to recieve. Frankly, patients in the ICU do not have the time to wait.
 
-## Why?
+In this study, we will identify the factors that have the most impact predicting survivability using a supervised machine learning model. We are building this model on an extremely diverse dataset, with information from 366 hospitals in the United States, Australia, and New Zealand. We will then attempt to visualize these factors and their influence in an effort to educate those new to the healthcare profession. We hope that this motivates hospital staff to diligently study vitals and reassure them of their role's importance.
 
-In addition to our curiousity regarding our own mortality, we thought this would be a good opportunity to learn about the aspects of our health that could be the difference between life and death! This dataset is very rich, over 150 columns of information per patient! One of our primary goals is to use supervised machine learning to determine what 5-10 features have the most impact on a patients survival. 
-
-The ICU is a unique department of any hospital. Many patients are not in a state to communicate their medical history. We would like to high-light the importance of taking vitals, and the valued information about the patient can be surmised from standard hospital tests and measurements. 
-
+We will be communicating via slack to evenly divide all imporant tasks and to notify the team of any new discoveries.
 
 
 It would be truly fascinating if we could compare our data with healthcares guidelines to see if we came to a similar conclusion. We will be communicating via slack to evenly divide all imporant tasks and to notify the team of any new discoveries. 
