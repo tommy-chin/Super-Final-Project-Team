@@ -26,6 +26,6 @@ Random forest classifier was chosen for our supervised machine learning model fr
 After fitting our Random Forest Classifier, our cleaned dataset had a training score accuracy of 0.919 and a testing score accuracy of 0.921. With these high accuracy scores, we are informed that the columns/factors we chose in our cleaned dataset have a definite influence on the outcome of hospital deaths. 
 ## Link to Google Slides
 https://docs.google.com/presentation/d/1hRXXjuN23n1NzC3Kvboo2ra6cVmhRnCKV_u7cMkz-D0/edit?usp=sharing
-
-
+## Link to Dashboard Presentation
+https://public.tableau.com/app/profile/thomas.chin4347/viz/Segment3PrototypeVisualizations/Sheet1#1
 
