@@ -6,34 +6,38 @@ CREATE TABLE ICU_data (
 	 d1_sysbp_max INT NOT NULL, 
 	 d1_diasbp_max INT NOT NULL, 
 	 d1_diasbp_min INT NOT NULL, 
-	 bmi VARCHAR NOT NULL,
-	 weight VARCHAR NOT NULL,
+	 gcs_verbal_apache INT NOT NULL,
+	 gcs_motor_apache INT NOT NULL,
+	 gcs_eyes_apache INT NOT NULL,
 	 age INT NOT NULL,
-	 d1_glucose_min INT NOT NULL,
-	 d1_glucose_max INT NOT NULL,
 	 patient_id INT NOT NULL,
 	 PRIMARY KEY (patient_id)
 );
 
 -- making demographic table 
-SELECT patient_id, gender, age, weight, hospital_death
+SELECT patient_id, age, hospital_death
 INTO patient_demographics 
 FROM icu_data
 
--- making bp table
-SELECT patient_id, d1_sysbp_min, d1_sysbp_max, d1_diasbp_max, d1_diasbp_min
+-- making bp and heartrate table
+SELECT patient_id, d1_heartrate_min, d1_heartrate_max, d1_sysbp_min, d1_sysbp_max, d1_diasbp_max, d1_diasbp_min
 INTO  blood_pressure_heart_rate
 FROM icu_data
 
--- Joining blood sugar and bloodpressure tables into new table
-SELECT blood_pressure_data.patient_id,
-	 blood_pressure_data.d1_diasbp_max,
-	 blood_pressure_data.d1_diasbp_min,
-	 blood_pressure_data.d1_sysbp_max,
-	 blood_pressure_data.d1_sysbp_min,
-     icu_data.d1_glucose_min,
-     icu_data.d1_glucose_max
-INTO blood_sugar_blood_pressure
-FROM blood_pressure_data
-INNER JOIN icu_data
-ON blood_pressure_data.patient_id = icu_data.patient_id;
+-- making gcs_tests table 
+SELECT patient_id, gcs_verbal_apache, gcs_motor_apache, gcs_eyes_apache
+INTO  gcs_tests
+FROM icu_data
+
+
+-- Joining bp and hospital death into one table
+SELECT blood_pressure_heart_rate.patient_id,
+	 blood_pressure_heart_rate.d1_diasbp_max,
+	 blood_pressure_heart_rate.d1_diasbp_min,
+	 blood_pressure_heart_rate.d1_sysbp_max,
+	 blood_pressure_heart_rate.d1_sysbp_min,
+	 patient_demographics.hospital_death
+INTO blood_pressure_vs_death
+FROM blood_pressure_heart_rate
+INNER JOIN patient_demographics
+ON blood_pressure_heart_rate.patient_id = patient_demographics.patient_id;
